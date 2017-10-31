@@ -12,6 +12,7 @@ public class SensorGraph {
 		
 		chosenPort = SerialPort.getCommPort(comPort);
 		chosenPort.setComPortTimeouts(SerialPort.TIMEOUT_SCANNER, 0, 0);
+		boolean isOpenPort = chosenPort.openPort();
 		if(chosenPort.openPort()) {
 			System.out.println("Port Conected:"+ comPort);	
 			
@@ -78,6 +79,17 @@ public class SensorGraph {
 			// disconnect from the serial port
 			chosenPort.closePort();
 		}
+	}
+
+	public static void getCommPorts() {
+
+		System.out.println("init getCommPorts");
+		SerialPort[] portNames = SerialPort.getCommPorts();
+		for(int i = 0; i < portNames.length; i++)
+			System.out.println(portNames[i].getSystemPortName());
+
+		System.out.println("end getCommPorts");
+		
 	}
 }
 

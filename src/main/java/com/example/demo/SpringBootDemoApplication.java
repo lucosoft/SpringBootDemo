@@ -22,7 +22,8 @@ public class SpringBootDemoApplication {
  
 	@RequestMapping(value = "/app/{comPort}")
 	public void findComPort(@PathVariable("comPort") String comPort) {
-		SensorGraph.findComPortImpl(comPort);
+//		SensorGraph.getCommPorts();
+		SensorGraph.findComPortImpl(comPort);	// se testea por ejemplo con http://localhost:8080/app/COM5
 //		System.out.println(comPort);
 		
 	}    
