@@ -20,14 +20,13 @@ public class ComportController {
 		SerialPort[] portNames = SerialPort.getCommPorts();
 		for (int i = 0; i < portNames.length; i++) {
 			list.add(new Comport(portNames[i].getSystemPortName()));
-			System.out.println(portNames[i].getSystemPortName());		
 		}
         return list;
     }
 
     public class Comport {
 
-        private final String comPort;
+        private String comPort;
 
         public Comport() {
             this.comPort = "";
@@ -39,6 +38,10 @@ public class ComportController {
 
         public String getComport() {
             return comPort;
+        }
+
+        public void setComport(String comPort) {
+        	this.comPort = comPort;
         }
     }
 
