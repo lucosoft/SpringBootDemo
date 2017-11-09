@@ -13,7 +13,8 @@ import com.fazecast.jSerialComm.SerialPort;
 @RestController
 public class ComportController {
 		
-    @CrossOrigin(origins = "http://localhost:8000")
+//    @CrossOrigin(origins = "http://localhost:8000")
+    @CrossOrigin(origins = "http://localhost:9000")
     @GetMapping("/getComPort")
 	public @ResponseBody List<Comport> getComPort() {
 		List<Comport> list = new ArrayList<>();
@@ -24,25 +25,5 @@ public class ComportController {
         return list;
     }
 
-    public class Comport {
-
-        private String comPort;
-
-        public Comport() {
-            this.comPort = "";
-        }
-
-        public Comport(String comPort) {
-            this.comPort = comPort;
-        }
-
-        public String getComport() {
-            return comPort;
-        }
-
-        public void setComport(String comPort) {
-        	this.comPort = comPort;
-        }
-    }
 
 }
