@@ -1,4 +1,11 @@
-package com.example.demo;
+/**
+ * 
+ */
+/**
+ * @author Lucas Guerrero
+ *
+ */
+package com.example.demo.model;
 
 public class Comport {
 

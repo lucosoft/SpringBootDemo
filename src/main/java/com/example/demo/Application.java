@@ -14,12 +14,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 @SpringBootApplication
 public class Application {
 
-	@RequestMapping("/")
-	@ResponseBody
-	String home1() {
-		return "Puto el que lee!";
-	}
-
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
@@ -29,7 +23,6 @@ public class Application {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-//                registry.addMapping("/greeting-javaconfig").allowedOrigins("http://localhost:9000");
                 registry.addMapping("/getComPort").allowedOrigins("http://localhost:8000");
             }
         };
