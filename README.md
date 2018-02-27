@@ -7,6 +7,7 @@ Caracteristicas:
 Mejoras Posibles:
 - Agregado de funcion openPort, closePort y getInputStream
 - Fix de error. An internal error occurred during: "Ready state poller". java.lang.NullPointerException
+- Fix de nombres en secuencia
 
 ## Diagramas
 Secuencia:
