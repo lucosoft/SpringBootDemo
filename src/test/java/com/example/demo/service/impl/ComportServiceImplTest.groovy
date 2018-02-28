@@ -19,4 +19,12 @@ class ComportServiceImplTest extends spock.lang.Specification {
         then:
         noExceptionThrown()
     }
+
+    def "CloseComPort"() {
+        when: "se llama al metodo"
+        service.closeComPort()
+
+        then:
+        noExceptionThrown()
+    }
 }
